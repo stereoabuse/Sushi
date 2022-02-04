@@ -1,0 +1,152 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+body {
+  margin: 12px;
+  color: #333;
+  font-family: "Lato", Verdana, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ddd;
+}
+
+#wrapper {
+  max-width: 840px;
+  margin: 0 auto;
+  /* border: 1px solid #999; */
+  position: relative;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0px 0px 6px 2px #aaa;
+}
+
+a {
+  color: #600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  font-family: "Lobster", cursive;
+  font-weight: normal;
+}
+
+header h1,
+header h2 {
+  font-size: 4rem;
+  margin: 8px 0;
+}
+
+header h2 {
+  font-size: 2rem;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 24px;
+}
+
+.nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 4px;
+  display: block;
+  background-color: #600;
+  transition: background-color 0.5s cubic-bezier(0.85,-0.01, 0.26, 0.99);
+}
+.nav a:hover {
+  color: #222;
+  background-color: #f0dfb4;
+} 
+
+aside {
+  position: absolute;
+  top: 200px;
+  left: 24px;
+  width: 180px;
+  background-color: #f0dfb4;
+  padding: 6px;
+  border: 1px solid #600;
+}
+
+article {
+  margin: 0 20px 0 240px;
+}
+
+article img {
+  float: right;
+}
+
+blockquote {
+  float: right;
+  width: 40%;
+  font-size: 24px;
+}
+
+blockquote::before {
+  content: "“";
+ font-size: 4rem;
+  font-family: serif;
+  color: #333;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+  color: #600;
+}
+
+aside + p::first-line {
+  font-weight: bold;
+}
+
+@media print {
+  * {
+    display: none !important;
+    color: red;
+  }
+}
+
+@media all and (max-width: 800px) {
+  body {
+    margin: 0;
+  }
+  article {
+    margin-left: 0;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: flex;
+    z-index: 10;
+  }
+
+  .nav li {
+    margin: 0;
+    flex-grow: 1;
+  }
+  .nav li a {
+    border-radius: 0;
+  }
+
+  aside {
+    position: static;
+    float: none;
+    margin-right: 20px;
+    width: 100%;
+  }
+
+}
+
+
+.foo {
+  font-size: 200px;
+  color: rebeccapurple;
+}
