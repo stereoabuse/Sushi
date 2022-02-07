@@ -1,19 +1,19 @@
-@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700");
 
 body {
   margin: 12px;
-  color: #333;
-  font-family: "Lato", Verdana, Arial, sans-serif;
+  color: black;
+  font-family: "Roboto","Lato", Verdana, Arial, sans-serif;
   line-height: 1.6;
-  background-color: #ddd;
+  background-image: url("https://gothammag.com/get/files/image/galleries/best-sushi-omakase-nyc.jpg");
 }
 
 #wrapper {
   max-width: 840px;
   margin: 0 auto;
-  /* border: 1px solid #999; */
+  border: 1px solid #999;
   position: relative;
-  background-color: #fff;
+  background-color: white;
   padding: 1rem;
   box-shadow: 0px 0px 6px 2px #aaa;
 }
@@ -28,7 +28,7 @@ a:hover {
 }
 
 header {
-  font-family: "Lobster", cursive;
+  font-family: "Abril Fatface", serif;
   font-weight: normal;
 }
 
@@ -36,6 +36,8 @@ header h1,
 header h2 {
   font-size: 4rem;
   margin: 8px 0;
+  text-align: right;
+  text-shadow: 2px 0 rgb(236, 236, 236);
 }
 
 header h2 {
@@ -44,72 +46,79 @@ header h2 {
 
 .nav {
   list-style: none;
-  padding: 0;
-  position: absolute;
-  right: 0;
-  top: 24px;
+  /* padding: 10; */
+  /* background-color: #600; */
+  width: 90%;
+  display: table;
 }
 
 .nav li {
-  display: inline-block;
-  margin-right: 10px;
+  display: table-cell;
+  width: 20%;
+  text-align: center;
 }
 .nav a {
   color: #fff;
   text-decoration: none;
-  padding: 4px;
+  padding: 10px;
   display: block;
-  background-color: #600;
-  transition: background-color 0.5s cubic-bezier(0.85,-0.01, 0.26, 0.99);
+  background-color: rgba(157, 29, 32, 0.125);
+  color: rgb(157, 29, 32);
+  transition: background-color 0.1s cubic-bezier(0.85,-0.01, 0.26, 0.99);
 }
 .nav a:hover {
   color: #222;
   background-color: #f0dfb4;
-} 
+}
 
 aside {
   position: absolute;
   top: 200px;
   left: 24px;
   width: 180px;
-  background-color: #f0dfb4;
+  background-color: rgb(253, 251, 236);
   padding: 6px;
-  border: 1px solid #600;
+  text-align: left;
+  /* border: 1px solid #600;  */
 }
 
 article {
   margin: 0 20px 0 240px;
 }
 
+article h2 {
+  font-size: 45px;
+}
+
 article img {
   float: right;
+}
+
+article img.zoom {
+  transition: transform .3s;
+  /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+}
+
+article img.zoom:hover {
+  transform: scale(1.25);
+  opacity: 0.4;
 }
 
 blockquote {
   float: right;
   width: 40%;
   font-size: 24px;
+  color: rgb(157, 29, 32);
 }
 
 blockquote::before {
   content: "“";
- font-size: 4rem;
+  font-size: 4rem;
   font-family: serif;
   color: #333;
   line-height: 0.1em;
   vertical-align: -0.4em;
-  color: #600;
-}
-
-aside + p::first-line {
-  font-weight: bold;
-}
-
-@media print {
-  * {
-    display: none !important;
-    color: red;
-  }
+  /* color: #600; */
 }
 
 @media all and (max-width: 800px) {
@@ -127,7 +136,7 @@ aside + p::first-line {
     display: flex;
     z-index: 10;
   }
-
+  
   .nav li {
     margin: 0;
     flex-grow: 1;
@@ -135,18 +144,21 @@ aside + p::first-line {
   .nav li a {
     border-radius: 0;
   }
-
+  
   aside {
     position: static;
     float: none;
     margin-right: 20px;
     width: 100%;
   }
-
+  
 }
 
 
-.foo {
-  font-size: 200px;
-  color: rebeccapurple;
+.summary {
+  text-decoration: underline;
+}
+
+.resturant {
+  color:rgb(157, 29, 32);
 }

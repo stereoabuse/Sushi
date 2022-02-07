@@ -85,22 +85,22 @@
 /* 5. DYNAMICALLY CREATE AN ELEMENT */
 
 /* CREATE a div and then look at it in the console */
-var newDiv = document.createElement("div");
+// var newDiv = document.createElement("div");
 
 /* Add a class */
-newDiv.className = "popover";
+// newDiv.className = "popover";
 // console.log(newDiv);
 
 /* Add text */
-newDiv.innerText = "Hello World";
+// newDiv.innerText = "Hello World";
 
 /* Add styles to the div */
-newDiv.style.fontSize = "40px";
-newDiv.style.color = "#600";
+// newDiv.style.fontSize = "40px";
+// newDiv.style.color = "#600";
 
 /* Store a reference to the H1 */
-var headerOne = document.querySelector("header h1");
+// var headerOne = document.querySelector("header h1");
 
 /* Add the new div to the document */
 // headerOne.append(newDiv);
-headerOne.prepend(newDiv);
+// headerOne.prepend(newDiv);
