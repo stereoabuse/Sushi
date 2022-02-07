@@ -104,3 +104,13 @@
 /* Add the new div to the document */
 // headerOne.append(newDiv);
 // headerOne.prepend(newDiv);
+var HELLO = "this prints something"
+
+console.log("aha!\n\nYou opened the console.\n\n")
+console.log("Now write a number between one and ten (inclusive, as letters not integer)")
+
+// Project Euler 1 - 10 to learn some JS math
+
+function one(){
+  console.log('yest')
+}
