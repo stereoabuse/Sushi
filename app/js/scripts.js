@@ -1,106 +1,27 @@
-// EXAMINING AND CHANGING THE DOCUMENT  //
-// console.log("Hello from scripts.js!");
-// console.log(document.title);
-// document.title = 123;
 
-/* 1. QUERYSELECTOR - uncomment in sequence */
-// var bodyElement = document.querySelector("body");
-/* view variable in console */
-// bodyElement.textContent = "Text content set in JavaScript";
-// bodyElement.style.borderBottom = "solid 30px red";
-/* elements in dev tools VS view source */
-/* comment out all the above */
-
-/* 2. QUERYSELECTORALL */
-// var listItems = document.querySelectorAll("li");
-/* view the variable in the console. Returns a NodeList */
-
-/*  Gives an error - and the console log command never runs */
-// listItems.style.backgroundColor = "red";
-/* errors block the rest of the code from running */
-// console.log("This will not run b/c the line above causes a blocking error");
-
-/* HERE'S 3 methods that WOULD work */
-/* a. */
-// listItems.forEach(function (listItem) {
-//   listItem.style.backgroundColor = "red";
-// });
-
-/* b. */
-// for (var i of listItems) {
-//   i.style.backgroundColor = "green";
-// }
-
-/* c. */
-// for (var i = 0; i < listItems.length; i++) {
-//   listItems[i].style.backgroundColor = "blue";
-// }
-
-/* 3. EVENTLISTENERS */
-/* ADD a class of 'map' to the map ANCHOR tag in the sidebar */
+// Appends a google maps iframe ... however there is a bug that blocks
 // var mapLink = document.querySelector(".map");
-// mapLink.style.borderBottom = "solid 8px red";
 
-// mapLink.addEventListener("click", function () {
-//   console.log("It works!");
+// mapLink.addEventListener("click", function(event) {
+//     event.preventDefault();
+//     console.log("It works!");
+//     var iframe = document.createElement("iframe");
+//     iframe.style.display = 'width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">';
+//     iframe.src =  ("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.8218594120603!2d-73.974922684596!3d40.67789387933563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25ba8edab126b%3A0xfaa0551477e2ec72!2sGeido!5e0!3m2!1sen!2sus!4v1644340608127!5m2!1sen!2sus");
+
+//   var newIframe = document.querySelector(".map");
+
+//   newIframe.append(iframe);
+
 // });
 
-/* ADD a external link to the map ANCHOR tag in the sidebar */
 
-// mapLink.addEventListener("click", function (event) {
-//   event.preventDefault();
-//   console.log("It works!");
-// });
 
-// mapLink.addEventListener("click", function() {
-//   event.preventDefault();
-//   console.log("event::", event);
-//   console.log("event.target::", event.target);
-//   console.log("event.target.href::", event.target.href);
-// });
-
-// document.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   console.log("event.target::", e.target);
-//   console.log("event.target.textContent::", e.target.textContent);
-// });
-
-/* 4. FUNCTIONS */
-// var mapLink = document.querySelector(".map");
-// mapLink.addEventListener("click", buttonClick);
-
-// function buttonClick(e) {
-//   e.preventDefault();
-//   console.log("className::", e.target.className);
-//   e.target.className = "foo";
-// }
-
-/*
-.foo {
-  font-size: 200px;
-  color: rebeccapurple;
+function myFunction() {
+  var x = document.getElementById("popupmap");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
-*/
-
-/* 5. DYNAMICALLY CREATE AN ELEMENT */
-
-/* CREATE a div and then look at it in the console */
-// var newDiv = document.createElement("div");
-
-/* Add a class */
-// newDiv.className = "popover";
-// console.log(newDiv);
-
-/* Add text */
-// newDiv.innerText = "Hello World";
-
-/* Add styles to the div */
-// newDiv.style.fontSize = "40px";
-// newDiv.style.color = "#600";
-
-/* Store a reference to the H1 */
-// var headerOne = document.querySelector("header h1");
-
-/* Add the new div to the document */
-// headerOne.append(newDiv);
-// headerOne.prepend(newDiv);
